@@ -1,7 +1,27 @@
 [project]
-name = "website"
-version = "0.1.0"
+name = "mc-website"
 description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "Yury V. Zaytsev", email = "yury@shurup.com" }
+]
+repository = "https://github.com/MidnightCommander/website"
+keywords = ["website", "documentation", "midnight-commander", "mkdocs", "mkdocs-material"]
+license = "MIT"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Web Environment",
+  "Framework :: MkDocs",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: JavaScript",
+  "Programming Language :: Python",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Documentation",
+  "Topic :: Text Processing :: Markup :: HTML",
+]
+version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material[git,recommended]>=9.6.6",
+]
