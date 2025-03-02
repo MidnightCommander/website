@@ -30,6 +30,7 @@ nav:
   - Home: index.md
   - Development:
       - Release process: release-process.md
+      - Translations: translations.md
 
 plugins:
   - macros:
@@ -40,4 +41,5 @@ markdown_extensions:
   - admonition
   - footnotes
   - pymdownx.highlight
+  - pymdownx.superfences
   - pymdownx.tasklist

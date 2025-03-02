@@ -22,7 +22,7 @@ git config --global user.email "yury@shurup.com"
 
 ### Transifex
 
-(see before: [wiki:TxRepoSetup how to set up local tx-repository]) # TODO
+[Set up Transifex](translations.md) to be able to work with translations.
 
 ### GPG
 
@@ -36,6 +36,7 @@ git config --global user.email "yury@shurup.com"
 
 - [ ] Prepare the repository for release:
 ```shell
+git clone git@github.com:MidnightCommander/mc.git
 git fetch
 git checkout master
 git reset --hard origin/master
