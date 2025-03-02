@@ -11,7 +11,7 @@ To join our project, go to our [project page](https://explore.transifex.com/mc/m
 
 As of 2025, Fedora 41 unfortunately only ships the old client (`transifex-client`), which is no longer useful.  The new client is available in [binary form from GitHub](https://github.com/transifex/cli/releases) (download, unpack and copy to `~/bin`). To complete the configuration, fill in your API token:
 
-```shell title="~/.transifexrc"
+```ini title="~/.transifexrc"
 [https://www.transifex.com]
 rest_hostname = https://rest.api.transifex.com
 token         = 1/***
