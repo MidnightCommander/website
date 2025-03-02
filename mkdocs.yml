@@ -1,1 +1,43 @@
-site_name: My Docs
+site_name: Midnight Commander
+site_url: https://new.midnight-commander.org
+site_description: Midnight Commander Development Center
+
+repo_name: MidnightCommander/mc
+repo_url: https://github.com/MidnightCommander/mc/
+
+copyright: Copyright &copy; 2025 Yury V. Zaytsev
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  logo: img/mc-logo.png
+  favicon: img/mc-logo.png
+
+  palette:
+    primary: custom
+    accent: custom
+
+  font:
+    text: Fira Mono
+    code: Fira Code
+
+  features:
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Development:
+      - Release process: release-process.md
+
+plugins:
+  - macros:
+      on_undefined: strict
+  - search
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.highlight
+  - pymdownx.tasklist
