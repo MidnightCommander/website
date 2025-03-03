@@ -2,7 +2,6 @@
 
 * We usually make two releases per year (spring and fall)
 * We currently use a semantic versioning scheme (`4.8.XX`)
-* Our development branch is called `master`
 
 ## Pre-requisites
 

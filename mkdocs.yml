@@ -5,6 +5,9 @@ site_description: Midnight Commander Development Center
 repo_name: MidnightCommander/mc
 repo_url: https://github.com/MidnightCommander/mc/
 
+extra:
+  mirror_url: https://repo.or.cz/midnight-commander.git
+
 copyright: Copyright &copy; 2025 Yury V. Zaytsev
 
 extra_css:
@@ -29,8 +32,9 @@ theme:
 nav:
   - Home: index.md
   - Development:
-      - Release process: release-process.md
+      - Source code: source.md
       - Translations: translations.md
+      - Release process: release-process.md
 
 plugins:
   - macros:
@@ -40,7 +44,12 @@ plugins:
 markdown_extensions:
   - admonition
   - footnotes
+  - def_list
   - pymdownx.highlight
   - pymdownx.keys
   - pymdownx.superfences
-  - pymdownx.tasklist
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      clickable_checkbox: true
