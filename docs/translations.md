@@ -36,3 +36,13 @@ To make sure that Transifex client is installed correctly, try to run it with th
 ```shell
 tx --help
 ```
+
+### Trying it out
+
+To check updated translations locally, you need to build `mc` from source. Check out the repository and run the following command to fetch the translations from Transifex:
+
+```shell
+./maint/sync-transifex/po-from-transifex.py
+```
+
+Then build and install as usual.
