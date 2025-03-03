@@ -10,7 +10,7 @@
 
 ## Contributing
 
-We require an issue (or pull request) for any code contribution, except for the following, which can be committed directly to the `master` branch:
+We require an issue (or pull request) and [code review](#code-review) for any code contribution, except for the following, which can be committed directly to the `master` branch:
 
 * Translations
 * Documentation
@@ -27,7 +27,7 @@ Ticket #<github_issue_number>: brief summary of the changes
 !!! note
     DCO sign-off is different to "commit signing" using something like PGP or `gitsign`!
 
-We require all contributors to acknowledge that they own the rights to the code they contribute by signing their commits with `git commit --amend -s` (adding a `Signed-off-by:` line to the commit message). This signifies that they abide by the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org), which is also used by the Linux kernel.
+All contributors must acknowledge that they own the rights to the code they contribute by signing their commits with `git commit --amend -s` (adding a `Signed-off-by:` line to the commit message). This signifies that they abide by the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org), which is also used by the Linux kernel.
 
 ### Branch lifecycle
 
@@ -79,6 +79,11 @@ Contributions should be reviewed according to the following criteria:
 *Technical evaluation*
 :   The code is a valid approach to the problem.
 
+!!! note
+    A lot of great (and sometimes not so great) literature has been written about code review over the decades. We don't intend to cover code review in detail here, just highlight the points that are most relevant to our process.
+
+    A good place to start learning about code review in general is [Your code sucks, and I hate you](https://jml.io/your-code-sucks-and-i-hate-you/) by Jonathan Lange.
+
 ## Cleanup branch
 
 For every release, we create a cleanup branch like `4633_cleanup` to aggregate small code changes, connected to the corresponding release ticket (e.g. [#4633]({{ config.repo_url }}issues/4633)).
@@ -86,3 +91,5 @@ For every release, we create a cleanup branch like `4633_cleanup` to aggregate s
 * The cleanup branch should be created as needed and merged back in periodically (currently about once a month).
 * Delete the cleanup branch after merging it into the main branch, and re-create it later with the same name if necessary.
 * The cleanup branch should be merged into the main branch no later than a few weeks before the release, to allow enough time for the changes to be tested by developers and users.
+
+Sometimes your patches might end up there. Don't worry, everything will be fine.
