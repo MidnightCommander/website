@@ -41,5 +41,6 @@ markdown_extensions:
   - admonition
   - footnotes
   - pymdownx.highlight
+  - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.tasklist
