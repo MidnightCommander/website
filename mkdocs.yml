@@ -28,10 +28,12 @@ theme:
 
   features:
     - content.code.copy
+#    - navigation.tabs
 
 nav:
   - Home: index.md
   - Development:
+      - Coding style: coding-style.md
       - Source code: source-code.md
       - Translations: translations.md
       - Release process: release-process.md
@@ -45,6 +47,8 @@ markdown_extensions:
   - admonition
   - footnotes
   - def_list
+  - attr_list
+  - md_in_html
   - pymdownx.highlight
   - pymdownx.keys
   - pymdownx.superfences
