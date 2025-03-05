@@ -275,9 +275,7 @@ int a = 2 + 5, b = 4 * 3 - 1;
 ```
 </div>
 
-## Helper variables
-
-Try to avoid passing function calls as function parameters in new code. Not doing so makes the code much easier to read, and it's also easier to use the "step" command within gdb.
+Try to avoid passing function calls as function parameters in new code. Not doing so makes the code much easier to read, and it's also easier to use the `step` command in `gdb`.
 
 ```c title="Right"
 void
