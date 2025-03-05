@@ -1,6 +1,6 @@
 # Coding style
 
-We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, check it out - it's an educational read.
+We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, check it out - it's an educational read. In a nutshell:
 
 * Use templates for new files (see [maint/templates]({{ config.repo_url }}tree/master/maint/templates) in the source tree)
 * Maximum line width is 100 characters[^1]
