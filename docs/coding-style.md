@@ -1,16 +1,25 @@
 # Coding style
 
-We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, check it out - it's an educational read. In a nutshell:
+<!-- TODO: add a link to the coding style to the PR template -->
+
+We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, do check it out—it's an educational read. In a nutshell:
 
 * Use templates for new files (see [maint/templates]({{ config.repo_url }}tree/master/maint/templates) in the source tree)
 * Maximum line width is 100 characters[^1]
 * No tabs, indent with 4 spaces
 * No trailing whitespace
 
-To format the code, use the `clang-format` (currently at version 19):
+Use the `clang-format` to format the code:
 
 ```shell
 make indent
+```
+
+To avoid formatting differences between `clang-format` versions, we currently use `clang-format-19`. The [clang-format Python distribution](https://pypi.org/project/clang-format/) provides precompiled binaries for all major platforms:
+
+```shell
+uv tool install 'clang-format==19.*'
+alias clang-format='uvx clang-format'
 ```
 
 [^1]: This is not to please folks with low-resolution screens, but rather because sticking to 100 columns prevents you from easily nesting more than one level of if statements or other code blocks.
@@ -54,7 +63,7 @@ mem = (char *) malloc (memneed);// No space before comment
 
 ## Conditionals
 
-Always follow an `if` keyword with a space, but do not include additional spaces before or after the parentheses in the conditional.
+Always follow an `if` keyword with a space, but do not include additional spaces before or after the parentheses in the conditional:
 
 <div class="grid" markdown>
 ```c title="Right"
@@ -70,7 +79,7 @@ if (0 == i)
 
 ## Function calls
 
-Always include a space between the name and the left parentheses when calling functions.
+Always include a space between the name and the left parentheses when calling functions:
 
 <div class="grid" markdown>
 ```c title="Right"
@@ -116,7 +125,7 @@ if (xterm_flag && xterm_title)
 
 ## Goto
 
-Use `goto` only when necessary. It's evil, but can greatly improve readability and reduce memory leaks when used as the only exit point from a function.
+Use `goto` only when necessary; it's evil, but can greatly improve readability and reduce memory leaks when used as the only exit point from a function.
 
 ```c title="Right"
 {
@@ -294,7 +303,7 @@ dirsizes_cmd (void)
 }
 ```
 
-Avoid abusing non-const function parameters as local variables:
+Avoid abusing non-`const` function parameters as local variables:
 
 ```c title="Right"
 void
