@@ -1,4 +1,4 @@
-# Welcome to Midnight Commander's home
+# Welcome to Midnight Commander
 
 [![GitHub Tag](https://img.shields.io/github/v/tag/MidnightCommander/mc)](https://github.com/MidnightCommander/mc/tags)
 [![License](https://img.shields.io/badge/license-GPLv3+-blue)](https://github.com/MidnightCommander/mc/)
