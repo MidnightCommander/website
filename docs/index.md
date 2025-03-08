@@ -1,7 +1,8 @@
 # Welcome to Midnight Commander
 
-[![GitHub Tag](https://img.shields.io/github/v/tag/MidnightCommander/mc)](https://github.com/MidnightCommander/mc/tags)
-[![License](https://img.shields.io/badge/license-GPLv3+-blue)](https://github.com/MidnightCommander/mc/)
+[![GitHub Tag](https://img.shields.io/github/v/tag/MidnightCommander/mc?label=latest%20release)](https://github.com/MidnightCommander/mc/tags)
+[![License](https://img.shields.io/badge/license-GPLv3+-blue)](https://github.com/MidnightCommander/mc)
+[![GitHub top language](https://img.shields.io/github/languages/top/MidnightCommander/mc)](https://github.com/MidnightCommander/mc)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/MidnightCommander/mc)](https://github.com/MidnightCommander/mc/issues)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/MidnightCommander/mc)](https://github.com/MidnightCommander/mc/pulls)
 [![CI](https://github.com/MidnightCommander/mc/actions/workflows/ci.yml/badge.svg)](https://github.com/MidnightCommander/mc)
