@@ -1,4 +1,4 @@
-The Midnight Commander project was founded around 1994 by Miguel de Icaza and is currently maintained as a team effort.
+The Midnight Commander project was founded around 1994 by Miguel de Icaza and is currently maintained as a team effort. We would like to thank all our contributors, past and present, including translators.
 
 ## Current team
 
