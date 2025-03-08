@@ -32,6 +32,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Maintainers: maintainers.md
   - Communication: communication.md
   - Development:
       - Source code: source-code.md
