@@ -8,7 +8,7 @@ repo_url: https://github.com/MidnightCommander/mc/
 extra:
   mirror_url: https://repo.or.cz/midnight-commander.git
 
-copyright: Copyright &copy; 2025 Yury V. Zaytsev
+copyright: Copyright &copy; 2025 <a href="https://www.linkedin.com/in/yuryzaytsev/">Yury V. Zaytsev</a>
 
 extra_css:
   - stylesheets/extra.css
