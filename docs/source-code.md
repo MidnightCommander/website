@@ -70,7 +70,7 @@ Contributions should be reviewed according to the following criteria:
 *Tests*
 :   Changes should be accompanied by tests that document that the desired goals have been achieved.
 
-*Code quality* (TODO see HACKING)
+*Code quality* (see [Coding style](coding-style.md))
 :   
     * Code is split into logically independent commits
     * Changes are consistent with the rest of the code base
