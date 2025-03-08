@@ -74,3 +74,8 @@ We also have extensive manual pages, which are the primary source of official do
     ```
     $ man mcdiff
     ```
+
+## Contributing & support
+
+* For support, see the [Communication](communication.md) page.
+* To contribute to `mc`, proceed to the ["Development" section](source-code.md).
