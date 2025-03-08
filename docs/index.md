@@ -15,16 +15,62 @@ Midnight Commander uses versatile text interface libraries such as [ncurses](htt
 
 This site is the new home of Midnight Commander. The main project repository has been moved from [Savannah](https://savannah.gnu.org/projects/mc) to a new Git repository hosted on [GitHub](https://github.com/MidnightCommander/mc).
 
-## Commands
+## Installation
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+The easiest way to install `mc` is to use your system package manager:
 
-## Project layout
+=== "Debian / Ubuntu"
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+    ```
+    # apt-get install mc
+    ```
+
+=== "Fedora / Red Hat"
+
+    ```
+    # dnf install mc
+    ```
+
+=== "FreeBSD"
+
+    ```
+    # pkg install mc
+    ```
+
+=== "macOS"
+
+    ```
+    % brew install midnight-commander
+    ```
+
+To compile from source, refer to the [installation instructions]({{ config.repo_url }}blob/master/doc/INSTALL).
+
+## Documentation
+
+The primary way to learn about `mc` is to use the context-sensitive online help available via ++f1++.
+
+We also have extensive manual pages, which are the primary source of official documentation:
+
+=== "mc"
+
+    ```
+    $ man mc
+    ```
+
+=== "mcedit"
+
+    ```
+    $ man mcedit
+    ```
+
+=== "mcview"
+
+    ```
+    $ man mcview
+    ```
+
+=== "mcdiff"
+
+    ```
+    $ man mcdiff
+    ```
