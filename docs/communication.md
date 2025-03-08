@@ -4,6 +4,11 @@ Alternatively, we've opened up [GitHub Discussions]({{ config.repo_url }}discuss
 
 To report an issue or file a feature request please use our [issue tracker on GitHub]({{ config.repo_url }}issues).
 
+!!! warning
+    Please keep in mind that the project is maintained by volunteers who code and communicate in their spare time for the fun of it. There is no entitlement to commercial-grade support, service level agreements, or any kind of warranties.
+
+    For best results, follow ["The Core Rules of Netiquette"](http://www.albion.com/netiquette/index.html) by Virginia Shea, which hasn't lost its relevance since 1994. In short, be pleasant and polite... and have fun!
+
 ## Mailing lists
 
 ### Users
