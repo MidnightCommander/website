@@ -32,6 +32,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Communication: communication.md
   - Development:
       - Source code: source-code.md
       - Coding style: coding-style.md
