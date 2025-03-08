@@ -28,13 +28,13 @@ theme:
 
   features:
     - content.code.copy
-#    - navigation.tabs
+    - navigation.sections
 
 nav:
   - Home: index.md
   - Development:
-      - Coding style: coding-style.md
       - Source code: source-code.md
+      - Coding style: coding-style.md
       - Translations: translations.md
       - Release process: release-process.md
 
