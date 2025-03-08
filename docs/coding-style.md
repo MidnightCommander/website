@@ -12,14 +12,14 @@ We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/
 Use the `clang-format` to format the code:
 
 ```shell
-make indent
+$ make indent
 ```
 
 To avoid formatting differences between `clang-format` versions, we currently use `clang-format-19`. The [clang-format Python distribution](https://pypi.org/project/clang-format/) provides precompiled binaries for all major platforms:
 
 ```shell
-uv tool install 'clang-format==19.*'
-alias clang-format='uvx clang-format'
+$ uv tool install 'clang-format==19.*'
+$ alias clang-format='uvx clang-format'
 ```
 
 [^1]: This is not to please folks with low-resolution screens, but rather because sticking to 100 columns prevents you from easily nesting more than one level of if statements or other code blocks.
