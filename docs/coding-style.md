@@ -238,9 +238,35 @@ if (b2 == FALSE)
 
 ## Variables
 
+Don't mix variable declarations and code; declare variables only at the beginning of the appropriate block.
+
 Reduce variable scope as much as possible: declare local variables in the block where they are used.
 
-If a variable is introduced to store an intermediate value, declare it as a constant:
+Separate variable declaration and code with an empty line.
+
+<div class="grid" markdown>
+```c title="Right"
+{
+    while (TRUE) {
+        int foo = 0;
+
+        do_bar (foo);
+    }
+}
+```
+
+```c title="Wrong"
+{
+    int foo = 0;
+    while (TRUE) {
+        do_bar (foo);
+    }
+}
+⠀
+```
+</div>
+
+If a variable is introduced only to store an intermediate value, declare it at the place of use, join declaration and initialization, and mark it as a constant:
 
 <div class="grid" markdown>
 ```c title="Right"
