@@ -1,6 +1,6 @@
 [project]
 name = "mc-website"
-description = "Add your description here"
+description = "Midnight Commander's website"
 readme = "README.md"
 authors = [
     { name = "Yury V. Zaytsev", email = "yury@shurup.com" }
