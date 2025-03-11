@@ -11,7 +11,7 @@ To join our project, go to our [project page](https://explore.transifex.com/mc/m
 !!! note
     At the moment it is only possible to translate the interface and hint files!
 
-    Translation of the manual pages from which the online help accessible via ++f1++ is generated has been disabled to protect our translators. Unfortunately, the resources were manually uploaded to Transifex by a former member of the development team, but the corresponding [sync code]({{ config.repo_url }}tree/master/maint/sync-transifex) for the manual pages was never developed.
+    Translation of the manual pages from which the online help accessible via ++f1++ is generated has been disabled to protect our translators. Unfortunately, the resources were manually uploaded to Transifex by a former member of the development team, but the corresponding [sync code]({{ config.repo_url }}/tree/master/maint/sync-transifex) for the manual pages was never developed.
 
     Will you be the hero to merge the translations we currently have and fix the sync code to properly handle the manual pages?
 

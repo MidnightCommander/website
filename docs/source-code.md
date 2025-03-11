@@ -6,6 +6,8 @@
     * <{{ config.repo_url }}>
     * <{{ extra.mirror_url }}> (mirror)
 
+To compile from source, refer to the [installation instructions]({{ config.repo_url }}/blob/master/doc/INSTALL).
+
 ## Contributing
 
 We require an issue (or pull request) and [code review](#code-review) for any code contribution, except for the following, which can be committed directly to the development branch:
@@ -91,7 +93,7 @@ Contributions should be reviewed according to the following criteria:
 
 ## Cleanup branch
 
-For every release, we create a cleanup branch like `4633_cleanup` to aggregate small code changes, connected to the corresponding release ticket (e.g. [#4633]({{ config.repo_url }}issues/4633)).
+For every release, we create a cleanup branch like `4633_cleanup` to aggregate small code changes, connected to the corresponding release ticket (e.g. [#4633]({{ config.repo_url }}/issues/4633)).
 
 * The cleanup branch should be created as needed and merged back in periodically (currently about once a month).
 * Delete the cleanup branch after merging it into the main branch, and re-create it later with the same name if necessary.

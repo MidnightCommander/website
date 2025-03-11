@@ -29,7 +29,7 @@ git config --global user.email "yury@shurup.com"
 
 ## Release process
 
-[Copy and paste]({{ page.edit_url | replace("/mc/", "/website/") }}) the following list into the `Prepare for release mc-4.8.XX` [issue on GitHub]({{ config.repo_url }}/issues):
+[Copy and paste]({{ page.edit_url | replace("/mc", "/website") }}) the following list into the `Prepare for release mc-4.8.XX` [issue on GitHub]({{ config.repo_url }}/issues):
 
 ### Pre-release tasks
 
@@ -64,7 +64,7 @@ git add doc/hints/l10n/mc.hint.*
 git commit -s -m 'maint: update hints translations from Transifex'
 git push origin master
 ```
-- [ ] Create a new `NEWS-4.8.YY` wiki page on Trac for the next version with an empty template. The template can be copied from the current `NEWS` wiki page (without the list of tasks and bug reports).
+- [ ] Create a new `NEWS-4.8.YY` [wiki page]({{ config.repo_url }}/wiki) for the next version with an empty template. The template can be copied from the current `NEWS` wiki page (without the list of tasks and bug reports).
 - [ ] Add the content of the current `NEWS` wiki page to the `doc/NEWS` file in the `git` repo:
 ```shell
 git add doc/NEWS

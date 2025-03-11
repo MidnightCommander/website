@@ -4,7 +4,7 @@
 
 We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, do check it out—it's an educational read. In a nutshell:
 
-* Use templates for new files (see [maint/templates]({{ config.repo_url }}tree/master/maint/templates) in the source tree)
+* Use templates for new files (see [maint/templates]({{ config.repo_url }}/tree/master/maint/templates) in the source tree)
 * Maximum line width is 100 characters[^1]
 * No tabs, indent with 4 spaces
 * No trailing whitespace

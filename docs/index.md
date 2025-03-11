@@ -43,9 +43,7 @@ The easiest way to install `mc` is to use your system package manager:
     % brew install midnight-commander
     ```
 
-Our source releases are kindly mirrored by [OSU OSL](https://osuosl.org). Our canonical repository is hosted [on GitHub]({{ extra.organization_url }}). See [Source code](source-code.md) for the links.
-
-To compile from source, refer to the [installation instructions]({{ config.repo_url }}blob/master/doc/INSTALL).
+Our source releases are kindly [mirrored by OSU OSL]({{ extra.downloads_url }}/?C=N;O=D). Our canonical repository is hosted [on GitHub]({{ config.repo_url }}). See the [Source Code](source-code.md) page for details.
 
 ## Documentation
 
