@@ -43,11 +43,6 @@ nav:
       - Translations: translations.md
       - Release process: release-process.md
 
-plugins:
-  - macros:
-      on_undefined: strict
-  - search
-
 markdown_extensions:
   - admonition
   - attr_list
@@ -64,3 +59,19 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       clickable_checkbox: true
+
+plugins:
+  - macros:
+      on_undefined: strict
+  - search
+  - redirects:
+      redirect_maps:
+        'browser.md': https://github.com/MidnightCommander/mc/tree/master
+        'diff.md': https://github.com/MidnightCommander/mc/commits/master
+        'downloads.md': https://ftp.osuosl.org/pub/midnightcommander
+        'log.md': https://github.com/MidnightCommander/mc/commits/master
+        'milestone.md': https://github.com/MidnightCommander/mc/milestones
+        'report.md': https://github.com/MidnightCommander/mc/issues
+        'roadmap.md': https://github.com/MidnightCommander/mc/milestones
+        'timeline.md': https://github.com/MidnightCommander/mc/commits/master
+        'wiki.md': 'index.md'
