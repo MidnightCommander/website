@@ -100,3 +100,9 @@ For every release, we create a cleanup branch like `4633_cleanup` to aggregate s
 * The cleanup branch should be merged into the main branch no later than a few weeks before the release, to allow enough time for the changes to be tested by developers and users.
 
 Sometimes your patches might end up there. Don't worry, everything will be fine.
+
+## Source tour
+
+A cross-referenced source code tour of the development branch is available at the following URL:
+
+* <{{ extra.source_url}}>
