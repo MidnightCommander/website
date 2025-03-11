@@ -17,15 +17,11 @@ yum install git-core fakeroot check-devel po4a libX11-devel
 git config --global user.name "Yury V. Zaytsev"
 git config --global user.email "yury@shurup.com"
 ```
-- Port over the GPG keyring to make it possible to sign the tag.
+- Port over the GPG keyring to make it possible to sign the tags.
 
 ### Transifex
 
 [Set up Transifex](translations.md) to be able to work with translations.
-
-### GPG
-
-(see before: [wiki:GpgSetUpForSigningReleases how to set up your gpg key for signing releases]) # TODO
 
 ## Release process
 
