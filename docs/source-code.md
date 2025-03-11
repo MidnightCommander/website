@@ -1,16 +1,14 @@
 # Source code
 
-* We use `git` for version control:
+* Our source releases are kindly mirrored by [OSU OSL](https://osuosl.org):
+    * [{{ extra.downloads_url }}]({{ extra.downloads_url }}/?C=N;O=D)
+* Our repository is hosted [on GitHub]({{ extra.organization_url}}) and mirrored by [repo.or.cz](https://repo.or.cz):
     * <{{ config.repo_url }}>
     * <{{ extra.mirror_url }}> (mirror)
-* Our development branch is called `master`
-* Prefix feature branch names with the issue ID (e.g. `4632_shift_fx`)
-* Rebase with `-i --autosquash` before merging to preserve linear history
-* Use non-fast forward (`--no-ff`) merges to track commit origin
 
 ## Contributing
 
-We require an issue (or pull request) and [code review](#code-review) for any code contribution, except for the following, which can be committed directly to the `master` branch:
+We require an issue (or pull request) and [code review](#code-review) for any code contribution, except for the following, which can be committed directly to the development branch:
 
 * Translations
 * Documentation
@@ -21,6 +19,13 @@ The commit message for the first patch in the series should begin with the follo
 ```
 Ticket #<github_issue_number>: brief summary of the changes
 ```
+
+### Version control
+
+* Our development branch is called `master`
+* Prefix feature branch names with the issue ID (e.g. `4632_shift_fx`)
+* Rebase with `-i --autosquash` before merging to preserve linear history
+* Use non-fast forward (`--no-ff`) merges to track commit origin
 
 ### Signing off commits
 
