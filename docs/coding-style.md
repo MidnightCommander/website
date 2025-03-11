@@ -310,6 +310,27 @@ int a = 2 + 5, b = 4 * 3 - 1;
 ```
 </div>
 
+Mark unused variables with the `MC_UNUSED` macro:
+
+```c title="Right"
+int
+progress_button_callback (MC_UNUSED WButton *button, MC_UNUSED int action)
+{
+    return 0;
+}
+```
+
+```c title="Wrong"
+int
+progress_button_callback (WButton *button, int action)
+{
+    (void) button;
+    (void) action;
+
+    return 0;
+}
+```
+
 Try to avoid passing function calls as function parameters in new code. Not doing so makes the code much easier to read, and it's also easier to use the `step` command in `gdb`.
 
 ```c title="Right"
