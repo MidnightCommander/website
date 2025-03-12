@@ -13,8 +13,6 @@ It's a feature-rich, full-screen, text-mode application that allows you to copy,
 
 Midnight Commander uses versatile text interface libraries such as [ncurses](https://invisible-island.net/ncurses/) or [S-Lang](https://www.jedsoft.org/slang/), which allows it to work on a regular console, inside an X Window terminal, over `ssh` connections, and in all kinds of remote shells.
 
-This site is the new home of Midnight Commander. The main project repository has been moved from [Savannah](https://savannah.gnu.org/projects/mc) to a new Git repository hosted on [GitHub](https://github.com/MidnightCommander/mc).
-
 ## Installation
 
 The easiest way to install `mc` is to use your system package manager:
