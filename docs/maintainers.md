@@ -18,13 +18,14 @@ Listed alphabetically by last name:
 * Sergei Trofimovich · :simple-github: [trofi](https://github.com/trofi)
 * Enrico Weigelt · :simple-github: [metux](https://github.com/metux)
 * Patrick Winnertz · :simple-github: [winnieXY](https://github.com/winnieXY)
-* Slava Zanko · :simple-github: [slavaz](https://github.com/slavaz)
+* Slava Zanko[^1] · :simple-github: [slavaz](https://github.com/slavaz)
+
+[^1]: Slava relaunched Midnight Commander as a collaborative project in 2009 and became the release manager until he stepped down for personal reasons in 2015.
 
 ## Former maintainers
 
 Listed in reverse chronological order:
 
-* Slava Zanko · :simple-github: [slavaz](https://github.com/slavaz)
 * Pavel Tsekov · :simple-github: [ptsekov](https://github.com/ptsekov)
 * Pavel Roskin · :simple-github: [proski](https://github.com/proski)
 * Miguel de Icaza · :simple-github: [migueldeicaza](https://github.com/migueldeicaza)
