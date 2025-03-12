@@ -22,3 +22,7 @@
     --md-accent-bg-color: rgba(229, 229, 229, 1);
     --md-accent-bg-color--light: rgba(229, 229, 229, 0.7); /* -0.3 */
 }
+
+.md-typeset a:not(div.tabbed-set a) {
+    text-decoration: underline;
+}
