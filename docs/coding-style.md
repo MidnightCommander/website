@@ -2,7 +2,7 @@
 
 <!-- TODO: add a link to the coding style to the PR template -->
 
-We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, do check it out—it's an educational read. In a nutshell:
+We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, do check it out—it is an educational read. In a nutshell:
 
 * Use templates for new files (see [maint/templates]({{ config.repo_url }}/tree/master/maint/templates) in the source tree)
 * Maximum line width is 100 characters[^1]
@@ -125,7 +125,7 @@ if (xterm_flag && xterm_title)
 
 ## Goto
 
-Use `goto` only when necessary; it's evil, but can greatly improve readability and reduce memory leaks when used as the only exit point from a function.
+Use `goto` only when necessary; it is evil, but can greatly improve readability and reduce memory leaks when used as the only exit point from a function.
 
 ```c title="Right"
 {
@@ -164,7 +164,7 @@ if ((bytes = read (fd, &routine.pointer, sizeof (routine))) == -1 || (size_t) by
     ...
 ```
 
-Don't put more than one statement on a line:
+Do not put more than one statement on a line:
 
 <div class="grid" markdown>
 ```c title="Right"
@@ -238,7 +238,7 @@ if (b2 == FALSE)
 
 ## Variables
 
-Don't mix variable declarations and code; declare variables only at the beginning of the appropriate block.
+Do not mix variable declarations and code; declare variables only at the beginning of the appropriate block.
 
 Reduce variable scope as much as possible: declare local variables in the block where they are used.
 
@@ -331,7 +331,7 @@ progress_button_callback (WButton *button, int action)
 }
 ```
 
-Try to avoid passing function calls as function parameters in new code. Not doing so makes the code much easier to read, and it's also easier to use the `step` command in `gdb`.
+Try to avoid passing function calls as function parameters in new code. Not doing so makes the code much easier to read, and it is also easier to use the `step` command in `gdb`.
 
 ```c title="Right"
 void

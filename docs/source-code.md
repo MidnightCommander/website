@@ -39,7 +39,7 @@ All contributors must acknowledge that they own the rights to the code they cont
 ### Branch lifecycle
 
 !!! tip
-    Don't forget to update the changelog as tracked on the current `NEWS-4.8.XX` wiki page!
+    Do not forget to update the changelog as tracked on the current `NEWS-4.8.XX` wiki page!
 
 1. Without PR
     - [ ] Assign issue to yourself
@@ -87,7 +87,7 @@ Contributions should be reviewed according to the following criteria:
 :   The code is a valid approach to the problem.
 
 !!! note
-    A lot of great (and sometimes not so great) literature has been written about code review over the decades. We don't intend to cover code review in detail here, just highlight the points that are most relevant to our process.
+    A lot of great (and sometimes not so great) literature has been written about code review over the decades. We do not intend to cover code review in detail here, just highlight the points that are most relevant to our process.
 
     A good place to start learning about code review in general is [Your code sucks, and I hate you](https://jml.io/your-code-sucks-and-i-hate-you/) by Jonathan Lange.
 
@@ -99,7 +99,7 @@ For every release, we create a cleanup branch like `4633_cleanup` to aggregate s
 * Delete the cleanup branch after merging it into the main branch, and re-create it later with the same name if necessary.
 * The cleanup branch should be merged into the main branch no later than a few weeks before the release, to allow enough time for the changes to be tested by developers and users.
 
-Sometimes your patches might end up there. Don't worry, everything will be fine.
+Sometimes your patches might end up there. Do not worry, everything will be fine.
 
 ## Source tour
 
