@@ -7,7 +7,7 @@
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/MidnightCommander/mc)](https://github.com/MidnightCommander/mc/pulls)
 [![CI](https://github.com/MidnightCommander/mc/actions/workflows/ci.yml/badge.svg)](https://github.com/MidnightCommander/mc)
 
-GNU Midnight Commander is a visual, dual-pane file manager released under the GNU General Public License and therefore qualifies as Free Software.
+GNU Midnight Commander is a visual, dual-pane file manager. It is released under the GNU General Public License and therefore qualifies as Free Software.
 
 It's a feature-rich, full-screen, text-mode application that allows you to copy, move, and delete files and entire directory trees, search for files, and execute commands in the subshell. Internal viewer, editor and diff viewer are included.
 
