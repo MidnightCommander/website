@@ -39,7 +39,7 @@ All contributors must acknowledge that they own the rights to the code they cont
 ### Branch lifecycle
 
 !!! tip
-    Do not forget to update the changelog as tracked on the current `NEWS-4.8.XX` wiki page!
+    Do not forget to update the changelog as tracked on the current `NEWS-4.8.XX` [wiki page]({{ config.repo_url }}/wiki)!
 
 1. Without PR
     - [ ] Assign issue to yourself
