@@ -6,10 +6,11 @@ repo_name: MidnightCommander/mc
 repo_url: https://github.com/MidnightCommander/mc
 
 extra:
-  source_url: https://source.midnight-commander.org
-  mirror_url: https://repo.or.cz/midnight-commander.git
   downloads_url: https://ftp.osuosl.org/pub/midnightcommander
+  man_url: https://source.midnight-commander.org/man
+  mirror_url: https://repo.or.cz/midnight-commander.git
   organization_url: https://github.com/MidnightCommander
+  source_url: https://source.midnight-commander.org
 
 copyright: Copyright &copy; 2025 <a href="https://www.linkedin.com/in/yuryzaytsev/">Yury V. Zaytsev</a>
 

@@ -55,11 +55,15 @@ We also have extensive manual pages, which are the primary source of official do
     $ man mc
     ```
 
+    ... or read the latest [development version]({{ extra.man_url }}/mc.html) online.
+
 === "mcedit"
 
     ```
     $ man mcedit
     ```
+
+    ... or read the latest [development version]({{ extra.man_url }}/mcedit.html) online.
 
 === "mcview"
 
@@ -67,11 +71,15 @@ We also have extensive manual pages, which are the primary source of official do
     $ man mcview
     ```
 
+    ... or read the latest [development version]({{ extra.man_url }}/mcview.html) online.
+
 === "mcdiff"
 
     ```
     $ man mcdiff
     ```
+
+    ... or read the latest [development version]({{ extra.man_url }}/mcdiff.html) online.
 
 ## Contributing & support
 
