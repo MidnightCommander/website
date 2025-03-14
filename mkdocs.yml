@@ -38,6 +38,7 @@ nav:
   - Home: index.md
   - Maintainers: maintainers.md
   - Communication: communication.md
+  - Other resources: other.md
   - Development:
       - Source code: source-code.md
       - Coding style: coding-style.md

@@ -34,16 +34,3 @@ To report an issue or file a feature request please use our [issue tracker on Gi
 #### Ticket updates
 
 * [Read the archives](https://groups.google.com/group/mc-bugs) at Google Groups
-
-## Other resources
-
-This website is the new home of Midnight Commander.
-
-The main project repository has been moved from [Savannah](https://savannah.gnu.org/projects/mc) to a new Git repository hosted on [GitHub](https://github.com/MidnightCommander/mc).
-
-We used to run Trac on `midnight-commander.org` to serve as our home page, wiki, source browser, and issue tracker. With the retirement of Trac, most of these locations have been moved to GitHub.
-
-* Wiki pages
-     * <{{ config.repo_url }}/wiki>
-* Trac content archive
-    * <{{ extra.organization_url }}/trac-archive>
