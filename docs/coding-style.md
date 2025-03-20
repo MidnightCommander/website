@@ -374,6 +374,30 @@ foo (int iterations)
 }
 ```
 
+## Loops
+
+Declare loop variables within the loop to limit its scope and avoid unwanted reuse of the last value set.
+
+<div class="grid" markdown>
+```c title="Right"
+⠀
+for (int i = 0; i < 5; i++)
+{
+    do_something (i);
+}
+⠀
+```
+
+```c title="Wrong"
+int i;
+
+for (i = 0; i < 5; i++)
+{
+    do_something (i);
+}
+```
+</div>
+
 ## Headers
 
 Do not mix headers:
