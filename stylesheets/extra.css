@@ -1,0 +1,28 @@
+:root > * {
+    /* Primary color shades */
+
+    /* 0 0 171 - Ansi Blue (4) */
+    --md-primary-fg-color: rgba(0, 0, 171, 1);
+    /* 0 0 245 - Ansi Bright Blue (12) */
+    --md-primary-fg-color--light: rgba(0, 0, 245, 1);
+    /* 73 163 176 - Ansi Cyan (6) */
+    --md-primary-fg-color--dark: rgba(73, 163, 176, 1);
+
+    /* 229 229 229 - Ansi Bright White (15) */
+    --md-primary-bg-color: rgba(229, 229, 229, 1);
+    --md-primary-bg-color--light: rgba(229, 229, 229, 0.7); /* -0.3 */
+
+    /* Accent color shades */
+
+    /* 210 45 222 - Bright Magenta (13) */
+    --md-accent-fg-color: rgba(210, 45, 222, 1);
+    --md-accent-fg-color--transparent: rgba(210, 45, 222, 0.1);
+
+    /* 229 229 229 - Ansi Bright White (15) */
+    --md-accent-bg-color: rgba(229, 229, 229, 1);
+    --md-accent-bg-color--light: rgba(229, 229, 229, 0.7); /* -0.3 */
+}
+
+.md-typeset a:not(div.tabbed-labels a) {
+    text-decoration: underline;
+}

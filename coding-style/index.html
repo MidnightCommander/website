@@ -1,0 +1,1089 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Midnight Commander Development Center">
+      
+      
+      
+        <link rel="canonical" href="https://new.midnight-commander.org/coding-style/">
+      
+      
+        <link rel="prev" href="../source-code/">
+      
+      
+        <link rel="next" href="../translations/">
+      
+      
+      <link rel="icon" href="../img/mc-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Coding style - Midnight Commander</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Mono";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#coding-style" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Midnight Commander" class="md-header__button md-logo" aria-label="Midnight Commander" data-md-component="logo">
+      
+  <img src="../img/mc-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Midnight Commander
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Coding style
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MidnightCommander/mc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MidnightCommander/mc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Midnight Commander" class="md-nav__button md-logo" aria-label="Midnight Commander" data-md-component="logo">
+      
+  <img src="../img/mc-logo.png" alt="logo">
+
+    </a>
+    Midnight Commander
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MidnightCommander/mc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MidnightCommander/mc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maintainers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maintainers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Source code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Coding style
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Coding style
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#readable-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Readable code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditionals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function calls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#braces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Braces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../translations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Translations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#readable-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Readable code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditionals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function calls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#braces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Braces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="coding-style">Coding style</h1>
+<!-- TODO: add a link to the coding style to the PR template -->
+
+<p>We loosely follow the <a href="https://www.gnu.org/prep/standards/standards.html">GNU Coding Standards</a> with some local deviations. Whether you agree with them or not, do check it out—it is an educational read. In a nutshell:</p>
+<ul>
+<li>Use templates for new files (see <a href="https://github.com/MidnightCommander/mc/tree/master/maint/templates">maint/templates</a> in the source tree)</li>
+<li>Maximum line width is 100 characters<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>No tabs, indent with 4 spaces</li>
+<li>No trailing whitespace</li>
+</ul>
+<p>Use the <code>clang-format</code> to format the code:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>make<span class="w"> </span>indent
+</code></pre></div>
+<p>To avoid formatting differences between <code>clang-format</code> versions, we currently use <code>clang-format-19</code>. The <a href="https://pypi.org/project/clang-format/">clang-format Python distribution</a> provides precompiled binaries for all major platforms:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;clang-format==19.*&#39;</span>
+$<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>clang-format<span class="o">=</span><span class="s1">&#39;uvx clang-format&#39;</span>
+</code></pre></div>
+<h2 id="readable-code">Readable code</h2>
+<p>Use your best judgment and choose the more readable option. Remember that many other people will be reading it:</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="n">bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">routine</span><span class="p">.</span><span class="n">pointer</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">routine</span><span class="p">));</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bytes</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">routine</span><span class="p">))</span>
+<span class="w">    </span><span class="p">...</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">routine</span><span class="p">.</span><span class="n">pointer</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">routine</span><span class="p">)))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">routine</span><span class="p">))</span>
+<span class="w">    </span><span class="p">...</span>
+</code></pre></div>
+<p>Do not put more than one statement on a line:</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<p>Use explicit comparison in equality operators:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p2</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i1</span><span class="p">,</span><span class="w"> </span><span class="n">i2</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
+</code></pre></div>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">p2</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i1</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">i2</span><span class="p">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">c2</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Do not check boolean values for equality:</p>
+<div class="highlight"><pre><span></span><code><span class="n">gboolean</span><span class="w"> </span><span class="n">b1</span><span class="p">,</span><span class="w"> </span><span class="n">b2</span><span class="p">;</span>
+</code></pre></div>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b2</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TRUE</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">FALSE</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="comments">Comments</h2>
+<p>Precede comments with a blank line. If the comment belongs directly to the following code, there should not be a blank line after the comment, unless the comment contains a summary of several blocks of following code.</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="cm">/*</span>
+<span class="cm"> * This is a multiline comment</span>
+<span class="cm"> *</span>
+<span class="cm"> * Note that edit_delete() will not corrupt anything if it is called </span>
+<span class="cm"> * while the cursor position is EOF.</span>
+<span class="cm"> */</span>
+<span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">edit_delete</span><span class="w"> </span><span class="p">(</span><span class="n">edit</span><span class="p">);</span>
+
+<span class="c1">// This is a one-line comment. Allocate additional memory.</span>
+<span class="n">mem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">malloc</span><span class="w"> </span><span class="p">(</span><span class="n">memneed</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief This is a Doxygen comment</span>
+<span class="cm"> *</span>
+<span class="cm"> * This is a more detailed explanation of</span>
+<span class="cm"> * this simple function.</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param[in]   param1     The parameter value of the function</span>
+<span class="cm"> * @param[out]  result1    The result value of the function</span>
+<span class="cm"> * @return                 0 on success and -1 on error</span>
+<span class="cm"> */</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">example</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">result1</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="c1">//This is a one-line comment.</span>
+<span class="n">mem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">malloc</span><span class="w"> </span><span class="p">(</span><span class="n">memneed</span><span class="p">);</span><span class="c1">// No space before comment</span>
+
+<span class="cm">/* This is a multiline comment,</span>
+<span class="cm">   with some more words...*/</span>
+</code></pre></div>
+<h2 id="conditionals">Conditionals</h2>
+<p>Always follow an <code>if</code> keyword with a space, but do not include additional spaces before or after the parentheses in the conditional:</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="err">⠀</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="function-calls">Function calls</h2>
+<p>Always include a space between the name and the left parentheses when calling functions:</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="n">do_example</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">result1</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="n">do_example</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">result1</span><span class="p">);</span>
+</code></pre></div>
+</div>
+<h2 id="braces">Braces</h2>
+<p>Braces for blocks of code associated with <code>for</code>, <code>if</code>, <code>switch</code>, <code>while</code>, <code>do .. while</code>, etc. should start on the next line after the statement keyword and end on a separate line.</p>
+<p>If the length of the opening statement requires it to span multiple lines, the opening brace should be on a separate line.</p>
+<p>Do not use braces unnecessarily when a single statement will do.</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">xterm_flag</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">xterm_title</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strip_home_and_password</span><span class="w"> </span><span class="p">(</span><span class="n">current_panel</span><span class="o">-&gt;</span><span class="n">cwd</span><span class="p">);</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span>
+<span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">str_options</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">opt_name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">g_free</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">str_options</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">opt_addr</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">xterm_flag</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">xterm_title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strip_home_and_password</span><span class="w"> </span><span class="p">(</span><span class="n">current_panel</span><span class="o">-&gt;</span><span class="n">cwd</span><span class="p">);</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">xterm_flag</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">xterm_title</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strip_home_and_password</span><span class="w"> </span><span class="p">(</span><span class="n">current_panel</span><span class="o">-&gt;</span><span class="n">cwd</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h2 id="goto">Goto</h2>
+<p>Use <code>goto</code> only when necessary; it is evil, but can greatly improve readability and reduce memory leaks when used as the only exit point from a function.</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">link_type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LINK_HARDLINK</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_strdup_printf</span><span class="w"> </span><span class="p">(</span><span class="n">_</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Link %s to:&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">str_trunc</span><span class="w"> </span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="w"> </span><span class="mi">46</span><span class="p">));</span>
+<span class="w">        </span><span class="n">dest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input_expand_dialog</span><span class="w"> </span><span class="p">(</span><span class="n">_</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Link&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">MC_HISTORY_FM_LINK</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">*</span><span class="n">dest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="k">goto</span><span class="w"> </span><span class="n">cleanup</span><span class="p">;</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">    </span><span class="p">...</span>
+
+<span class="nl">cleanup</span><span class="p">:</span>
+<span class="w">    </span><span class="n">g_free</span><span class="w"> </span><span class="p">(</span><span class="n">src</span><span class="p">);</span>
+<span class="w">    </span><span class="n">g_free</span><span class="w"> </span><span class="p">(</span><span class="n">dest</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="variables">Variables</h2>
+<p>Do not mix variable declarations and code; declare variables only at the beginning of the appropriate block.</p>
+<p>Reduce variable scope as much as possible: declare local variables in the block where they are used.</p>
+<p>Separate variable declaration and code with an empty line.</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">TRUE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">do_bar</span><span class="w"> </span><span class="p">(</span><span class="n">foo</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">TRUE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">do_bar</span><span class="w"> </span><span class="p">(</span><span class="n">foo</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="err">⠀</span>
+</code></pre></div>
+</div>
+<p>If a variable is introduced only to store an intermediate value, declare it at the place of use, join declaration and initialization, and mark it as a constant:</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">ssize_t</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mc_readlink</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+<span class="err">⠀</span>
+<span class="err">⠀</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="kt">ssize_t</span><span class="w"> </span><span class="n">len</span><span class="p">;</span>
+
+<span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mc_readlink</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+</div>
+<p>Avoid having initialized and uninitialized variables in the same declaration:</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="err">⠀</span>
+</code></pre></div>
+</div>
+<p>Avoid multiple non-trivial variable initializations in a declaration:</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="err">⠀</span>
+</code></pre></div>
+</div>
+<p>Mark unused variables with the <code>MC_UNUSED</code> macro:</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="kt">int</span>
+<span class="nf">progress_button_callback</span><span class="w"> </span><span class="p">(</span><span class="n">MC_UNUSED</span><span class="w"> </span><span class="n">WButton</span><span class="w"> </span><span class="o">*</span><span class="n">button</span><span class="p">,</span><span class="w"> </span><span class="n">MC_UNUSED</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">action</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="kt">int</span>
+<span class="nf">progress_button_callback</span><span class="w"> </span><span class="p">(</span><span class="n">WButton</span><span class="w"> </span><span class="o">*</span><span class="n">button</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">action</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">button</span><span class="p">;</span>
+<span class="w">    </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Try to avoid passing function calls as function parameters in new code. Not doing so makes the code much easier to read, and it is also easier to use the <code>step</code> command in <code>gdb</code>.</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="kt">void</span>
+<span class="nf">dirsizes_cmd</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ComputeDirSizeUI</span><span class="w"> </span><span class="o">*</span><span class="n">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_dir_size_create_ui</span><span class="w"> </span><span class="p">();</span>
+<span class="w">    </span><span class="n">compute_dir_size_destroy_ui</span><span class="w"> </span><span class="p">(</span><span class="n">ui</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="kt">void</span>
+<span class="nf">dirsizes_cmd</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">compute_dir_size_destroy_ui</span><span class="w"> </span><span class="p">(</span><span class="n">compute_dir_size_create_ui</span><span class="w"> </span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Avoid abusing non-<code>const</code> function parameters as local variables:</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="kt">void</span>
+<span class="nf">foo</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">iterations</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">do_one_thing</span><span class="w"> </span><span class="p">(</span><span class="n">iterations</span><span class="p">);</span>
+<span class="w">    </span><span class="n">do_something</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">result</span><span class="p">);</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="kt">void</span>
+<span class="nf">foo</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">iterations</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">iterations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">do_one_thing</span><span class="w"> </span><span class="p">(</span><span class="n">iterations</span><span class="p">);</span>
+<span class="w">    </span><span class="n">do_something</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">iterations</span><span class="p">);</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="loops">Loops</h2>
+<p>Declare loop variables within the loop to limit its scope and avoid unwanted reuse of the last value set.</p>
+<div class="grid">
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="err">⠀</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">do_something</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="err">⠀</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">do_something</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="headers">Headers</h2>
+<p>Do not mix headers:</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;errno.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/stat.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/global.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/tty/tty.h&quot;</span><span class="c1">  // LINES, tty_touch_screen()</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/tty/win.h&quot;</span><span class="c1">  // do_enter_ca_mode()</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/subshell.h&quot;</span><span class="c1">  // use_subshell</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/help.h&quot;</span><span class="c1">      // interactive_display()</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/setup.h&quot;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Wrong</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;errno.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/stat.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/subshell.h&quot;</span><span class="c1">  // use_subshell</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/help.h&quot;</span><span class="c1">      // interactive_display()</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/tty/tty.h&quot;</span><span class="c1">  // LINES, tty_touch_screen()</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/tty/win.h&quot;</span><span class="c1">  // do_enter_ca_mode()</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/setup.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/global.h&quot;</span>
+</code></pre></div>
+<p>Use short comment for header file:</p>
+<div class="highlight"><span class="filename">Right</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/tty/tty.h&quot;</span><span class="c1">   // LINES, tty_touch_screen()</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib/tty/win.h&quot;</span><span class="c1">   // do_enter_ca_mode()</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/subshell.h&quot;</span><span class="c1">  // use_subshell</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;src/help.h&quot;</span><span class="c1">      // interactive_display()</span>
+</code></pre></div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>This is not to please folks with low-resolution screens, but rather because sticking to 100 columns prevents you from easily nesting more than one level of if statements or other code blocks.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href="https://www.linkedin.com/in/yuryzaytsev/">Yury V. Zaytsev</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.sections"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
