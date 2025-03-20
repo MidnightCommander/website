@@ -24,6 +24,93 @@ $ alias clang-format='uvx clang-format'
 
 [^1]: This is not to please folks with low-resolution screens, but rather because sticking to 100 columns prevents you from easily nesting more than one level of if statements or other code blocks.
 
+## Readable code
+
+Use your best judgment and choose the more readable option. Remember that many other people will be reading it:
+
+```c title="Right"
+bytes = read (fd, &routine.pointer, sizeof (routine));
+if (bytes == -1 || (size_t) bytes < sizeof (routine))
+    ...
+```
+
+```c title="Wrong"
+if ((bytes = read (fd, &routine.pointer, sizeof (routine))) == -1 || (size_t) bytes < sizeof (routine))
+    ...
+```
+
+Do not put more than one statement on a line:
+
+<div class="grid" markdown>
+```c title="Right"
+a = 0;
+b = 2;
+
+a = f ();
+if (a == 2)
+    b = 5;
+```
+
+```c title="Wrong"
+a = 0; b = 2;
+
+if ((a = f()) == 2)
+    b = 5;
+
+if (a == 2) b = 5;
+```
+</div>
+
+Use explicit comparison in equality operators:
+
+```c
+void *p1, *p2;
+int i1, i2;
+char c1, c2;
+```
+
+<div class="grid" markdown>
+```c title="Right"
+if (p1 != NULL)
+if (p2 == NULL)
+
+if (i1 != 0)
+if (i2 == 0)
+
+if (c1 != '\0')
+if (c2 == '\0')
+```
+
+```c title="Wrong"
+if (p1)
+if (!p2)
+
+if (i1)
+if (!i2)
+
+if (c1)
+if (!c2)
+```
+</div>
+
+Do not check boolean values for equality:
+
+```c
+gboolean b1, b2;
+```
+
+<div class="grid" markdown>
+```c title="Right"
+if (b1)
+if (!b2)
+```
+
+```c title="Wrong"
+if (b1 == TRUE)
+if (b2 == FALSE)
+```
+</div>
+
 ## Comments
 
 Precede comments with a blank line. If the comment belongs directly to the following code, there should not be a blank line after the comment, unless the comment contains a summary of several blocks of following code.
@@ -148,93 +235,6 @@ cleanup:
 
 }
 ```
-
-## Readable code
-
-Use your best judgment and choose the more readable option. Remember that many other people will be reading it:
-
-```c title="Right"
-bytes = read (fd, &routine.pointer, sizeof (routine));
-if (bytes == -1 || (size_t) bytes < sizeof (routine))
-    ...
-```
-
-```c title="Wrong"
-if ((bytes = read (fd, &routine.pointer, sizeof (routine))) == -1 || (size_t) bytes < sizeof (routine))
-    ...
-```
-
-Do not put more than one statement on a line:
-
-<div class="grid" markdown>
-```c title="Right"
-a = 0;
-b = 2;
-
-a = f ();
-if (a == 2)
-    b = 5;
-```
-
-```c title="Wrong"
-a = 0; b = 2;
-
-if ((a = f()) == 2)
-    b = 5;
-
-if (a == 2) b = 5;
-```
-</div>
-
-Use explicit comparison in equality operators:
-
-```c
-void *p1, *p2;
-int i1, i2;
-char c1, c2;
-```
-
-<div class="grid" markdown>
-```c title="Right"
-if (p1 != NULL)
-if (p2 == NULL)
-
-if (i1 != 0)
-if (i2 == 0)
-
-if (c1 != '\0')
-if (c2 == '\0')
-```
-
-```c title="Wrong"
-if (p1)
-if (!p2)
-
-if (i1)
-if (!i2)
-
-if (c1)
-if (!c2)
-```
-</div>
-
-Do not check boolean values for equality:
-
-```c
-gboolean b1, b2;
-```
-
-<div class="grid" markdown>
-```c title="Right"
-if (b1)
-if (!b2)
-```
-
-```c title="Wrong"
-if (b1 == TRUE)
-if (b2 == FALSE)
-```
-</div>
 
 ## Variables
 
