@@ -21,6 +21,7 @@ extra:
       link: https://source.midnight-commander.org
 
 copyright: Copyright &copy; 2025 <a href="https://www.linkedin.com/in/yuryzaytsev/">Yury V. Zaytsev</a>
+site_author: Yury V. Zaytsev
 
 extra_css:
   - stylesheets/extra.css
