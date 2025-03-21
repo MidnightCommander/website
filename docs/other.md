@@ -6,6 +6,8 @@ We used to run a self-hosted Trac instance for over a decade to serve as our hom
 
 ## Trac archives
 
+The old server is still available at <https://old.midnight-commander.org> until it is decommissioned. Please let us know if there is any content you would like to secure!
+
 * [Files]({{ extra.organization_url }}/trac-archive)
 * [Wiki]({{ extra.organization_url }}/trac-archive/wiki)
 
