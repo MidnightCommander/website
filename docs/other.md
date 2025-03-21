@@ -9,6 +9,16 @@ We used to run a self-hosted Trac instance for over a decade to serve as our hom
 * [Files]({{ extra.organization_url }}/trac-archive)
 * [Wiki]({{ extra.organization_url }}/trac-archive/wiki)
 
+## Obsolete mailing lists
+
+### Commit notifications
+
+* [Read the archives](https://groups.google.com/group/mc-commits) at Google Groups
+
+### Ticket updates
+
+* [Read the archives](https://groups.google.com/group/mc-bugs) at Google Groups
+
 ## Forks
 
 !!! warning

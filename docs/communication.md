@@ -24,13 +24,3 @@ To report an issue or file a feature request please use our [issue tracker on Gi
 * Read the archives:
     * [Current archives at OSU OSL](https://lists.midnight-commander.org/pipermail/mc-devel/)
     * [Old archives at discontinued GNOME mail services](https://mail.gnome.org/archives/mc-devel/)
-
-### Obsolete lists
-
-#### Commit notifications
-
-* [Read the archives](https://groups.google.com/group/mc-commits) at Google Groups
-
-#### Ticket updates
-
-* [Read the archives](https://groups.google.com/group/mc-bugs) at Google Groups
