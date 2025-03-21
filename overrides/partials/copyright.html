@@ -1,0 +1,39 @@
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+      {% if page and config %}
+        &bull;
+        Revision: <a href="{{ config.repo_url | replace('/mc', '/website') }}/commit/{{ page.meta.git_site_revision_date_localized_hash }}">g{{ page.meta.git_site_revision_date_localized_hash[:9] }}</a>
+        &bull;
+        <a
+          href="{{ page.edit_url | replace('/mc', '/website') }}"
+          title="{{ lang.t('action.edit') }}"
+          class="md-footer__copyright_button"
+        >
+          {% set icon = config.theme.icon.edit or "material/file-edit-outline" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </a>
+        {% if "/blob/" in page.edit_url %}
+          {% set part = "blob" %}
+        {% else %}
+          {% set part = "edit" %}
+        {% endif %}
+        <a
+          href="{{ page.edit_url | replace(part, 'raw') | replace('/mc', '/website') }}"
+          title="{{ lang.t('action.view') }}"
+          class="md-footer__copyright_button"
+        >
+          {% set icon = config.theme.icon.view or "material/file-eye-outline" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>

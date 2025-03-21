@@ -26,3 +26,13 @@
 .md-typeset a:not(div.tabbed-labels a) {
     text-decoration: underline;
 }
+
+.md-footer__copyright_button {
+    display: inline-block;
+    width: 0.75rem;
+
+    svg {
+        vertical-align: -10%;
+        fill: currentcolor;
+    }
+}

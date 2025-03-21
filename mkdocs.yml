@@ -29,6 +29,8 @@ theme:
   language: en
 
   name: material
+  custom_dir: overrides
+
   logo: img/mc-logo.png
   favicon: img/mc-logo.png
 
@@ -73,6 +75,9 @@ markdown_extensions:
       clickable_checkbox: true
 
 plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      strict: true
   - macros:
       on_undefined: strict
   - redirects:
