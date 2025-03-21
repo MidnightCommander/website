@@ -18,6 +18,8 @@ extra_css:
   - stylesheets/extra.css
 
 theme:
+  language: en
+
   name: material
   logo: img/mc-logo.png
   favicon: img/mc-logo.png
