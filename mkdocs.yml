@@ -12,6 +12,14 @@ extra:
   organization_url: https://github.com/MidnightCommander
   source_url: https://source.midnight-commander.org
 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MidnightCommander
+    - icon: fontawesome/solid/download
+      link: https://ftp.osuosl.org/pub/midnightcommander
+    - icon: fontawesome/solid/book
+      link: https://source.midnight-commander.org
+
 copyright: Copyright &copy; 2025 <a href="https://www.linkedin.com/in/yuryzaytsev/">Yury V. Zaytsev</a>
 
 extra_css:
