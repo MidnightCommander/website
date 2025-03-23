@@ -4,7 +4,7 @@ The Midnight Commander project was founded around 1994 by Miguel de Icaza and is
 
 * Andrew Borodin · :simple-github: [aborodin](https://github.com/aborodin) / [mc-worker](https://github.com/mc-worker)
 
-* Yury V. Zaytsev · :simple-github: [zyv](https://github.com/zyv)
+* Yury V. Zaytsev · :simple-github: [zyv](https://github.com/zyv) · <iframe id="github-sponsors-iframe" src="https://github.com/sponsors/zyv/button" title="Sponsor Yury" height="32" width="114"></iframe>
 
 ### Former team members
 

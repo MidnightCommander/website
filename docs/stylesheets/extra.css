@@ -36,3 +36,23 @@
         fill: currentcolor;
     }
 }
+
+#github-sponsors-iframe {
+    border: 0;
+    border-radius: 6px;
+}
+
+#github-sponsors-iframe {
+    -ms-transform: scale(0.7); /* IE 9 */
+    -ms-transform-origin: 0 0;
+    -moz-transform: scale(0.7); /* Firefox */
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.7); /* Opera */
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.7); /* Safari And Chrome */
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.7); /* Standard Property */
+    transform-origin: 0 0; /* Standard Property */
+
+    margin-bottom: -0.75rem;
+}
