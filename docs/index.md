@@ -13,6 +13,8 @@ Midnight Commander is a feature-rich, full-screen, text-mode application that al
 
 `mc` uses versatile text interface libraries such as [ncurses](https://invisible-island.net/ncurses/) or [S-Lang](https://www.jedsoft.org/slang/), which allows it to work on a regular console, inside an X Window terminal, over `ssh` connections, and in all kinds of remote shells.
 
+![Midnight Commander screenshot](img/mc-screenshot-cropped.png)
+
 ## Installation
 
 The easiest way to install `mc` is to use your system package manager:
