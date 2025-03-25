@@ -1,7 +1,5 @@
 # Coding style
 
-<!-- TODO: add a link to the coding style to the PR template -->
-
 We loosely follow the [GNU Coding Standards](https://www.gnu.org/prep/standards/standards.html) with some local deviations. Whether you agree with them or not, do check it out—it is an educational read. In a nutshell:
 
 * Use templates for new files (see [maint/templates]({{ config.repo_url }}/tree/master/maint/templates) in the source tree)
