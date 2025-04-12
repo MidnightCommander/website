@@ -4,6 +4,12 @@ The main project forge has been moved from [Savannah](https://savannah.gnu.org/p
 
 We used to run a self-hosted Trac instance for over a decade to serve as our home page, wiki, source browser, and issue tracker. With the retirement of Trac, most of these items have been moved to GitHub.
 
+## Skin editor
+
+A third party has developed an online skin editor for Midnight Commander that can be accessed through a browser without installation:
+
+* <https://github.com/phplego/mc>
+
 ## Trac archives
 
 The old server is still available at <https://old.midnight-commander.org> until it is decommissioned. Please let us know if there is any content you would like to secure!
