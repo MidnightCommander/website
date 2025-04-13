@@ -83,6 +83,12 @@ We also have extensive manual pages, which are the primary source of official do
 
     ... or read the latest [development version]({{ extra.man_url }}/mcdiff.html) online.
 
+## Color schemes
+
+Midnight Commander supports theming! Check out the skins that come with the distribution or develop your own:
+
+* <https://skins.midnight-commander.org>
+
 ## Contributing & support
 
 * For support, see the [Communication](communication.md) page.
