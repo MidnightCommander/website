@@ -12,6 +12,8 @@ extra:
   organization_url: https://github.com/MidnightCommander
   source_url: https://source.midnight-commander.org
 
+  clang_version: 20
+
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/MidnightCommander
