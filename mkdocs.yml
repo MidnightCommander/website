@@ -12,7 +12,7 @@ extra:
   organization_url: https://github.com/MidnightCommander
   source_url: https://source.midnight-commander.org
 
-  clang_version: 20
+  clang_format_version: 20.1.0
 
   social:
     - icon: fontawesome/brands/github

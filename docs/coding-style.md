@@ -13,10 +13,10 @@ Use the `clang-format` to format the code:
 $ make indent
 ```
 
-To avoid formatting differences between `clang-format` versions, we currently use `clang-format-{{ extra.clang_version }}`. The [clang-format Python distribution](https://pypi.org/project/clang-format/) provides precompiled binaries for all major platforms:
+To avoid formatting differences between `clang-format` versions, we currently use `clang-format-{{ extra.clang_format_version }}`. The [clang-format Python distribution](https://pypi.org/project/clang-format/) provides precompiled binaries for all major platforms:
 
 ```shell
-$ uv tool install 'clang-format=={{ extra.clang_version }}.*'
+$ uv tool install 'clang-format=={{ extra.clang_format_version }}.*'
 $ alias clang-format='uvx clang-format'
 ```
 
