@@ -1,7 +1,7 @@
 # Source code
 
 * Our source releases are kindly mirrored by [OSU OSL](https://osuosl.org):
-    * [{{ extra.downloads_url }}]({{ extra.downloads_url }}/?C=N;O=D)
+    * [{{ extra.downloads_url.rsplit("?", 1)[0] }}]({{ extra.downloads_url }})
 * Our repository is hosted [on GitHub]({{ extra.organization_url}}) and mirrored by [repo.or.cz](https://repo.or.cz):
     * <{{ config.repo_url }}>
     * <{{ extra.mirror_url }}> (mirror)
