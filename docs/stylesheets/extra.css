@@ -56,3 +56,11 @@
 
     margin-bottom: -0.75rem;
 }
+
+#jetbrains-logo {
+    float: right;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 33%;
+}
