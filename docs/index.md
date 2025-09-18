@@ -37,6 +37,12 @@ The easiest way to install `mc` is to use your system package manager:
     # pkg install mc
     ```
 
+=== "OpenBSD"
+
+    ```
+    # pkg_add mc
+    ```
+
 === "macOS"
 
     ```
