@@ -1,6 +1,6 @@
 # Source code
 
-## Download locations
+## Downloads
 
 * Our source releases are kindly mirrored by [OSU OSL](https://osuosl.org):
     * [{{ extra.downloads_url.rsplit("?", 1)[0] }}]({{ extra.downloads_url }})
