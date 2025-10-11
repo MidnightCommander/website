@@ -35,7 +35,7 @@ This fork appears to be actively developed. Please contact the author for status
 * Source code:
     * <https://github.com/adamyg/mcwin32>
 
-### Lua scripting
+### Lua scripting (mc^2)
 
 This fork is based on `mc-4.8.17` (released in 2016) and unfortunately has not been updated since.
 
