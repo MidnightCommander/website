@@ -4,7 +4,7 @@ The main project forge has been moved from [Savannah](https://savannah.gnu.org/p
 
 We used to run a self-hosted Trac instance for over a decade to serve as our home page, wiki, source browser, and issue tracker. With the retirement of Trac, most of these items have been moved to GitHub.
 
-<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg" alt="JetBrains logo" id="jetbrains-logo"> Our thanks go to JetBrains for providing us with licences for CLion and PyCharm to use in developing Midnight Commander!
+<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg" alt="JetBrains logo" id="jetbrains-logo"> Our thanks go to JetBrains for providing us with licenses for CLion and PyCharm to use in developing Midnight Commander!
 
 ## Trac archives
 
