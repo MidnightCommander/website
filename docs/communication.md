@@ -1,4 +1,4 @@
-Communication, discussion, and decision-making within the Midnight Commander project is primarily done through mailing list conversations.
+Communication, discussion, and decision-making within the Midnight Commander project is primarily done through [mailing list](#mailing-lists) conversations.
 
 Alternatively, we have opened up [GitHub Discussions]({{ config.repo_url }}/discussions) for those who prefer a more forum-like experience.
 
