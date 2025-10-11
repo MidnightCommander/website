@@ -101,9 +101,9 @@ Contributions should be reviewed according to the following criteria:
 
 For every release, we create a cleanup branch like `4633_cleanup` to aggregate small code changes, connected to the corresponding release ticket (e.g. [#4633]({{ config.repo_url }}/issues/4633)).
 
-* The cleanup branch should be created as needed and merged back in periodically (currently about once a month).
-* Delete the cleanup branch after merging it into the main branch, and re-create it later with the same name if necessary.
-* The cleanup branch should be merged into the main branch no later than a few weeks before the release, to allow enough time for the changes to be tested by developers and users.
+* The cleanup branch should be created as needed and merged back in periodically (currently every few months).
+* Delete the cleanup branch after merging it into the main branch and re-create it later with the same name if necessary.
+* The cleanup branch should be merged into the main branch no later than a few weeks before the release to allow enough time for the changes to be tested by developers and users.
 
 Sometimes your patches might end up there. Do not worry, everything will be fine.
 
