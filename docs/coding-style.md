@@ -59,56 +59,6 @@ if (a == 2) b = 5;
 ```
 </div>
 
-Use explicit comparison in equality operators:
-
-```c
-void *p1, *p2;
-int i1, i2;
-char c1, c2;
-```
-
-<div class="grid" markdown>
-```c title="Right"
-if (p1 != NULL)
-if (p2 == NULL)
-
-if (i1 != 0)
-if (i2 == 0)
-
-if (c1 != '\0')
-if (c2 == '\0')
-```
-
-```c title="Wrong"
-if (p1)
-if (!p2)
-
-if (i1)
-if (!i2)
-
-if (c1)
-if (!c2)
-```
-</div>
-
-Do not check boolean values for equality:
-
-```c
-gboolean b1, b2;
-```
-
-<div class="grid" markdown>
-```c title="Right"
-if (b1)
-if (!b2)
-```
-
-```c title="Wrong"
-if (b1 == TRUE)
-if (b2 == FALSE)
-```
-</div>
-
 ## Comments
 
 Precede comments with a blank line. If the comment belongs directly to the following code, there should not be a blank line after the comment, unless the comment contains a summary of several blocks of following code.
@@ -159,6 +109,56 @@ if (i == 0)
 ```c title="Wrong"
 if ( i == 0 )
 if (0 == i)
+```
+</div>
+
+Use explicit comparison in equality operators:
+
+```c
+void *p1, *p2;
+int i1, i2;
+char c1, c2;
+```
+
+<div class="grid" markdown>
+```c title="Right"
+if (p1 != NULL)
+if (p2 == NULL)
+
+if (i1 != 0)
+if (i2 == 0)
+
+if (c1 != '\0')
+if (c2 == '\0')
+```
+
+```c title="Wrong"
+if (p1)
+if (!p2)
+
+if (i1)
+if (!i2)
+
+if (c1)
+if (!c2)
+```
+</div>
+
+Do not check boolean values for equality:
+
+```c
+gboolean b1, b2;
+```
+
+<div class="grid" markdown>
+```c title="Right"
+if (b1)
+if (!b2)
+```
+
+```c title="Wrong"
+if (b1 == TRUE)
+if (b2 == FALSE)
 ```
 </div>
 
