@@ -8,7 +8,7 @@
     * <{{ config.repo_url }}>
     * <{{ extra.mirror_url }}> (mirror)
 
-To compile from source, refer to the [installation instructions]({{ config.repo_url }}/blob/master/doc/INSTALL).
+To compile from source, refer to the [in-tree documentation]({{ config.repo_url }}/tree/master/doc), and, specifically, the [installation instructions]({{ config.repo_url }}/blob/master/doc/INSTALL).
 
 ## Documentation
 
