@@ -7,6 +7,8 @@
 * Our repository is hosted [on GitHub]({{ extra.organization_url}}) and mirrored by [repo.or.cz](https://repo.or.cz):
     * <{{ config.repo_url }}>
     * <{{ extra.mirror_url }}> (mirror)
+* Our online skin editor can be found at the following URL:
+    * <https://skins.midnight-commander.org>
 
 To compile from source, refer to the [in-tree documentation]({{ config.repo_url }}/tree/master/doc), and, specifically, the [installation instructions]({{ config.repo_url }}/blob/master/doc/INSTALL).
 
