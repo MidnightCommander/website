@@ -1,15 +1,15 @@
 # Midnight Commander's website
 
-This website is made with [MkDocs](https://www.mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+This website is made with [ProperDocs](https://properdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 ```shell
 $ uv sync --all-extras --dev
-$ uv run mkdocs serve
+$ uv run properdocs serve
 ```
 
 ## Redirects
 
-The following redirects have been implemented in `mkdocs.yml`:
+The following redirects have been implemented in `properdocs.yml`:
 
 * All basic Trac pages (`wiki`, `browser`, `log`, etc.)
 * Ticket redirects (`ticket/*`, statically generated)

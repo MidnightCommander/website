@@ -27,4 +27,4 @@ jobs:
 
       - run: uv sync --all-extras --dev
 
-      - run: uv run mkdocs gh-deploy --force
+      - run: uv run properdocs gh-deploy --force
