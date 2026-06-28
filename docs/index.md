@@ -43,7 +43,13 @@ The easiest way to install `mc` is to use your system package manager:
     # pkg_add mc
     ```
 
-=== "macOS"
+=== "macOS MacPorts"
+
+    ```
+    % sudo port install mc
+    ```
+
+=== "macOS Homebrew"
 
     ```
     % brew install midnight-commander
