@@ -31,28 +31,24 @@ The easiest way to install `mc` is to use your system package manager:
     # dnf install mc
     ```
 
-=== "FreeBSD"
+=== "FreeBSD / OpenBSD"
 
     ```
-    # pkg install mc
-    ```
+    # FreeBSD
+    $ pkg install mc
 
-=== "OpenBSD"
-
-    ```
-    # pkg_add mc
+    # OpenBSD
+    $ pkg_add mc
     ```
 
 === "macOS MacPorts"
 
     ```
-    % sudo port install mc
-    ```
-
-=== "macOS Homebrew"
-
-    ```
+    # Homebrew
     % brew install midnight-commander
+
+    # MacPorts
+    % sudo port install mc
     ```
 
 Our [source releases]({{ extra.downloads_url }}) are kindly mirrored by OSU OSL. Our [canonical repository]({{ config.repo_url }}) is hosted on GitHub. See the [Source code](source-code.md) page for details.
