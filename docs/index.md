@@ -41,7 +41,7 @@ The easiest way to install `mc` is to use your system package manager:
     $ pkg_add mc
     ```
 
-=== "macOS MacPorts"
+=== "macOS Homebrew / MacPorts"
 
     ```
     # Homebrew
