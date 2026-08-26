@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../img/mc-logo.png">
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -804,8 +804,8 @@
 yum<span class="w"> </span>install<span class="w"> </span>git-core<span class="w"> </span>fakeroot<span class="w"> </span>check-devel<span class="w"> </span>po4a<span class="w"> </span>libX11-devel
 </code></pre></div></li>
 <li>Configure <code>git</code>:
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Yury V. Zaytsev&quot;</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;yury@shurup.com&quot;</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Yury V. Zaytsev"</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"yury@shurup.com"</span>
 </code></pre></div></li>
 <li>Port over the GPG keyring to make it possible to sign the tags.</li>
 </ul>
@@ -830,7 +830,7 @@ mkdir<span class="w"> </span>dist<span class="p">;</span><span class="w"> </span
 <li class="task-list-item"><input type="checkbox"/> Commit PO translations to <code>git</code>:
 <div class="highlight"><pre><span></span><code>make<span class="w"> </span>-C<span class="w"> </span>dist/po<span class="w"> </span>update-po
 git<span class="w"> </span>add<span class="w"> </span>po/*.po
-git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;maint: update PO translations from Transifex&#39;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span><span class="s1">'maint: update PO translations from Transifex'</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Download hints translations from Transifex:
@@ -838,13 +838,13 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Commit hints translations to <code>git</code>:
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>doc/hints/l10n/mc.hint.*
-git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;maint: update hints translations from Transifex&#39;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span><span class="s1">'maint: update hints translations from Transifex'</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Create a new <code>NEWS-4.8.YY</code> <a href="https://github.com/MidnightCommander/mc/wiki">wiki page</a> for the next version with an empty template. The template can be copied from the current <code>NEWS</code> wiki page (without the list of tasks and bug reports).</li>
 <li class="task-list-item"><input type="checkbox"/> Add the content of the current <code>NEWS</code> wiki page to the <code>doc/NEWS</code> file in the <code>git</code> repo:
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>doc/NEWS
-git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;maint: update doc/NEWS file&#39;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span><span class="s1">'maint: update doc/NEWS file'</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Create a new version label<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> on GitHub (<code>ver: 4.8.XX</code>)</li>
@@ -853,7 +853,7 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <h2 id="cutting-release-tarballs">Cutting release tarballs</h2>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox"/> Create a new <code>git</code> tag:
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>-s<span class="w"> </span><span class="m">4</span>.8.XX<span class="w">  </span><span class="c1"># &quot;Release&quot; or &quot;RCn&quot;</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>-s<span class="w"> </span><span class="m">4</span>.8.XX<span class="w">  </span><span class="c1"># "Release" or "RCn"</span>
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Create <code>*.tar.(bz2|xz)</code> distribution archives:
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>dist<span class="p">;</span><span class="w"> </span>fakeroot<span class="w"> </span>make<span class="w"> </span>dist-bzip2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>fakeroot<span class="w"> </span>make<span class="w"> </span>dist-xz
@@ -875,10 +875,10 @@ make<span class="w"> </span>check
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Upload source packages and checksums to the mirror master (maintainers should have access via public keys):
 <div class="highlight"><pre><span></span><code>scp<span class="w"> </span>mc-4.8.XX.*<span class="w"> </span>midnightcommander@ftp-osl.osuosl.org:/home/midnightcommander/data
-ssh<span class="w"> </span>midnightcommander@ftp-osl.osuosl.org<span class="w"> </span><span class="s1">&#39;ls -als /home/midnightcommander/data/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">4</span>.8.3
+ssh<span class="w"> </span>midnightcommander@ftp-osl.osuosl.org<span class="w"> </span><span class="s1">'ls -als /home/midnightcommander/data/'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">4</span>.8.3
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Trigger distribution of the tarballs to the mirrors:
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>midnightcommander@ftp-osl.osuosl.org<span class="w"> </span><span class="s1">&#39;/home/midnightcommander/trigger-midnightcommander&#39;</span>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>midnightcommander@ftp-osl.osuosl.org<span class="w"> </span><span class="s1">'/home/midnightcommander/trigger-midnightcommander'</span>
 </code></pre></div></li>
 <li class="task-list-item"><input type="checkbox"/> Check that files can be downloaded; adjust permissions (<code>0644</code>) if necessary</li>
 </ul>
@@ -1052,7 +1052,7 @@ ssh<span class="w"> </span>midnightcommander@ftp-osl.osuosl.org<span class="w"> 
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
