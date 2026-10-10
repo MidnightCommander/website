@@ -20,7 +20,7 @@ classifiers = [
   "Topic :: Text Processing :: Markup :: HTML",
 ]
 version = "0.1.0"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
     "properdocs",
     "mkdocs-macros-plugin>=1.3.7",
